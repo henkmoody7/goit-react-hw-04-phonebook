@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { List, LIstItem } from './ContactsList.styled';
 import { Button } from 'components/ContactsForm/ContactsForm.styled';
 export const ContactsList = ({ contacts, onDelete }) => {
@@ -17,4 +19,15 @@ export const ContactsList = ({ contacts, onDelete }) => {
       </List>
     </div>
   );
+};
+
+ContactsList.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+  onDelete: PropTypes.func.isRequired,
 };
