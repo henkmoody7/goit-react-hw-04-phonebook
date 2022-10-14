@@ -21,7 +21,7 @@ export const Input = styled.input`
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  color: #fff;
+
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 20px;
